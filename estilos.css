@@ -61,7 +61,7 @@ li {
   
   main {
     background-color: orange;
-    background-image: url('../img/guitarra.jpg');
+    background-image: url('guitarra.jpg');
     /*grid-column-start: 1;
       grid-row-start: 2;*/
     grid-area: main;
