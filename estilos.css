@@ -1,0 +1,110 @@
+* {
+
+    /*background-color: aquamarine;*/
+    font-family: "Rubik Wet Paint", system-ui;
+  }
+  
+  header,
+  main,
+  aside,
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p {
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+  }
+#header-encabezado {
+  background-color: brown;
+}
+
+li {
+  color: black;
+}
+#main-encabezado {
+  background-color: brown;
+}
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 75px 1fr 50px;
+    gap: 0.5em;
+    grid-template-areas:
+      "header header"
+      "main"
+      "footer footer";
+  }
+  
+  footer {
+    background-color: red;
+    /*grid-row-start: 3;
+      grid-column: span 2;*/
+    grid-area: footer;
+    align-items: left;
+  }
+  
+  header {
+    color:blue;
+    background-color: aqua;
+    /*grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;*/
+    grid-area: header;
+  }
+  
+  main {
+    background-color: orange;
+    background-image: url('../img/guitarra.jpg');
+    /*grid-column-start: 1;
+      grid-row-start: 2;*/
+    grid-area: main;
+
+  }
+  
+  aside {
+    color: white;
+    background-color: rgb(175, 89, 236);
+    grid-area: aside;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+  }
+  
+  @media screen and (min-width: 768px) {
+    body {
+      grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    }
+  
+    aside {
+      display: block;
+      justify-content: center;
+      align-items: center;  
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    body {
+      grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    }
+  
+    aside {
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+  }
